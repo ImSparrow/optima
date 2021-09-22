@@ -1,14 +1,12 @@
-To install the dependencies:
+Link to deployed Site: https://happy-kepler-14cbb3.netlify.app/
+
+\To install the dependencies:
 
 ### `npm install`
-
-\
 
 To run the app:
 
 ### `npm start`
-
-\
 
 The initial page is the "All Users" page, which displays all the users and their number of posts\
 You can click on the card to see all their posts, and click on the post to see the post thread itself\

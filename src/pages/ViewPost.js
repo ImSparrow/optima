@@ -22,7 +22,7 @@ const ViewPost = () => {
   };
   document.title = `${post[0].name}'s Post`;
   return (
-    <>
+    <div className={classes["post-container"]}>
       <Card className={classes["post-item__content"]}>
         <div className={classes["post-item__info"]} role="main">
           <div className={classes["post-item__user"]}>
@@ -41,7 +41,7 @@ const ViewPost = () => {
       </Card>
       <Comment></Comment>
       <CommentList items={comments}></CommentList>
-    </>
+    </div>
   );
 };
 
