@@ -1,0 +1,44 @@
+.menubtn {
+  width: 3rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.menubtn span {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  background: white;
+}
+
+.title a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerNav {
+  display: none;
+}
+
+.drawer-nav {
+  height: 100%;
+}
+.searchbar {
+  min-width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .menubtn {
+    display: none;
+  }
+
+  .headerNav {
+    display: block;
+  }
+}

@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from "react-router-dom";
+import MainNavigation from "./components/Navigation/MainNavigation";
+import NewPost from "./pages/NewPost";
+import UserPosts from "./pages/UserPosts";
+import Users from "./pages/Users";
+import store from "./store/store";
+import { Provider } from "react-redux";
+import ViewPost from "./pages/ViewPost";
+import SearchPost from "./pages/SearchPost";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <MainNavigation />
+        <main>
+          <Switch>
+            <Route path="/" exact>
+              <Users></Users>
+            </Route>
+            <Route path="/:userId/posts" exact>
+              <UserPosts></UserPosts>
+            </Route>
+            <Route path="/posts/new" exact>
+              <NewPost></NewPost>
+            </Route>
+            <Route path="/post/:postId" exact>
+              <ViewPost></ViewPost>
+            </Route>
+            <Route path="/search/:searchId" exact>
+              <SearchPost></SearchPost>
+            </Route>
+            <Redirect to="/"></Redirect>
+          </Switch>
+        </main>
+      </Router>
+    </Provider>
   );
 }
 

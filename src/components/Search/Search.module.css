@@ -1,0 +1,29 @@
+.searchbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar {
+  min-width: 2rem;
+}
+.button {
+  font: inherit;
+  border: 1px solid green;
+  border-radius: 4px;
+  background: green;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  background: rgb(1, 216, 1);
+  border-color: rgb(1, 216, 1);
+}
