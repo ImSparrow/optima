@@ -9,12 +9,14 @@ const SearchPost = () => {
   const users = useSelector((state) => state.post.users);
   const postFilter = posts.filter(
     (post) =>
-      post.name.includes(search) ||
-      post.email.includes(search) ||
+      post.name.toLowerCase().includes(search) ||
+      post.email.toLowerCase().includes(search) ||
       post.post.toLowerCase().includes(search)
   );
   const userFilter = users.filter(
-    (user) => user.name.includes(search) || user.email.includes(search)
+    (user) =>
+      user.name.toLowerCase().includes(search) ||
+      user.email.toLowerCase().includes(search)
   );
   document.title = "Finding Posts...";
   return (

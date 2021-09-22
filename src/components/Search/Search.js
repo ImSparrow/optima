@@ -14,7 +14,7 @@ const Search = () => {
   const searchHandlerClick = () => {
     const search = searchRef.current.value;
     searchRef.current.value = "";
-    history.push(`/search/${search}`);
+    history.push(`/search/${search.toLowerCase()}`);
   };
   return (
     <div className={classes.searchbox} role="search">
